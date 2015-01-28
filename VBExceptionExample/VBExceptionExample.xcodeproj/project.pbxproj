@@ -15,6 +15,7 @@
 		5B1D64A11A79900500EEEF79 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D649F1A79900500EEEF79 /* LaunchScreen.xib */; };
 		5B1D64AD1A79900500EEEF79 /* VBExceptionExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D64AC1A79900500EEEF79 /* VBExceptionExampleTests.m */; };
 		5B1D64BD1A79903C00EEEF79 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D64BC1A79903C00EEEF79 /* VBException.m */; };
+		5B1D64C21A79910700EEEF79 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D64C11A79910700EEEF79 /* VBNotImplementedException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		5B1D64AC1A79900500EEEF79 /* VBExceptionExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBExceptionExampleTests.m; sourceTree = "<group>"; };
 		5B1D64BB1A79903C00EEEF79 /* VBException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBException.h; sourceTree = "<group>"; };
 		5B1D64BC1A79903C00EEEF79 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
+		5B1D64C01A79910700EEEF79 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
+		5B1D64C11A79910700EEEF79 /* VBNotImplementedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNotImplementedException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 			children = (
 				5B1D64BB1A79903C00EEEF79 /* VBException.h */,
 				5B1D64BC1A79903C00EEEF79 /* VBException.m */,
+				5B1D64C01A79910700EEEF79 /* VBNotImplementedException.h */,
+				5B1D64C11A79910700EEEF79 /* VBNotImplementedException.m */,
 			);
 			name = VBException;
 			path = ../VBException;
@@ -236,6 +241,7 @@
 				5B1D64991A79900500EEEF79 /* ViewController.m in Sources */,
 				5B1D64961A79900500EEEF79 /* AppDelegate.m in Sources */,
 				5B1D64931A79900500EEEF79 /* main.m in Sources */,
+				5B1D64C21A79910700EEEF79 /* VBNotImplementedException.m in Sources */,
 				5B1D64BD1A79903C00EEEF79 /* VBException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
