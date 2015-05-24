@@ -24,6 +24,9 @@
 
 #import "VBException.h"
 
+/**
+ *  Throw VBNotImplementedException inside method which is described, but will be implemented later (or it must be implemented by subclasses). 
+ */
 @interface VBNotImplementedException : VBException
 
 @end

@@ -27,7 +27,7 @@
 @implementation VBException
 
 + (instancetype) exception {
-    return [self exceptionWithReason:@""
+    return [self exceptionWithReason:nil
                             userInfo:nil];
 }
 
@@ -37,7 +37,7 @@
 }
 
 + (instancetype) exceptionWithUserInfo:(NSDictionary*)userInfo {
-    return [self exceptionWithReason:@""
+    return [self exceptionWithReason:nil
                             userInfo:userInfo];
 }
 

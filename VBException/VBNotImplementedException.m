@@ -27,7 +27,7 @@
 @implementation VBNotImplementedException
 
 + (instancetype) exception {
-    return [self exceptionWithReason:@"Developers haven't implemented this code yet!"];
+    return [self exceptionWithReason:@"Developers haven't implemented this method yet!"];
 }
 
 @end
