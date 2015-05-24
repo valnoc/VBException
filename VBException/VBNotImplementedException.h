@@ -1,7 +1,7 @@
 //
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2014 Valeriy Bezuglyy. All rights reserved.
+//    Copyright (c) 2015 Valeriy Bezuglyy.
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -24,6 +24,9 @@
 
 #import "VBException.h"
 
+/**
+ *  Throw VBNotImplementedException inside method which is described, but will be implemented later (or it must be implemented by subclasses). 
+ */
 @interface VBNotImplementedException : VBException
 
 @end

@@ -1,7 +1,7 @@
 //
 //    The MIT License (MIT)
 //
-//    Copyright (c) 2014 Valeriy Bezuglyy. All rights reserved.
+//    Copyright (c) 2015 Valeriy Bezuglyy.
 //
 //    Permission is hereby granted, free of charge, to any person obtaining a copy
 //    of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@
 @implementation VBNotImplementedException
 
 + (instancetype) exception {
-    return [self exceptionWithReason:@"Developers haven't implemented this code yet!"];
+    return [self exceptionWithReason:@"Developers haven't implemented this method yet!"];
 }
 
 @end
