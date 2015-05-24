@@ -25,7 +25,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  VBException simplifies exception instance creation by adding useful class methods.
+ *  VBException is a base class for your own exceptions. It adds useful class methods for fast exception instance creation.
  */
 @interface VBException : NSException
 
