@@ -1,7 +1,11 @@
 VBException
 ===========
 
-VBException is a base class for your own exceptions. It adds useful class methods for fast exception instance creation.
+ VBException is a base class for your own exceptions.
+ 
+ Create subclasses and implement <i>+reasonWithUserInfo:</i> method to provide useful reason information.
+ 
+ By default, exception name is its classname. It can be changed by implementing <i>+name</i> method.
 
 ## How to install
 Use CocoaPods
