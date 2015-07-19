@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#import "VBNotImplementedException.h"
+
 @interface VBExceptionExampleTests : XCTestCase
 
 @end
@@ -28,6 +30,15 @@
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
+    VBNotImplementedException* exception = [VBNotImplementedException exception];
+    XCTAssert(exception != nil);
+    XCTAssert([exception.name isEqualToString:NSStringFromClass([VBNotImplementedException class])]);
+    XCTAssert([exception.reason isEqualToString:@"This code is to be implemented later."]);
+    
+    void(^tmpThrows)() = ^void() {
+        @throw exception;
+    };
+    XCTAssertThrowsSpecific(tmpThrows(), VBNotImplementedException);
 }
 
 - (void)testPerformanceExample {
