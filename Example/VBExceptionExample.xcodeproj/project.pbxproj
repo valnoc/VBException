@@ -16,6 +16,8 @@
 		5B1D64AD1A79900500EEEF79 /* VBExceptionExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D64AC1A79900500EEEF79 /* VBExceptionExampleTests.m */; };
 		5B6BCB1C1B5C01A000A59503 /* VBException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BCB191B5C01A000A59503 /* VBException.m */; };
 		5B6BCB1D1B5C01A000A59503 /* VBNotImplementedException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BCB1B1B5C01A000A59503 /* VBNotImplementedException.m */; };
+		5B6BCB201B5C068D00A59503 /* VBInvalidClassException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BCB1F1B5C068D00A59503 /* VBInvalidClassException.m */; };
+		5B6BCB231B5C06D700A59503 /* VBNilValueException.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6BCB221B5C06D700A59503 /* VBNilValueException.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		5B6BCB191B5C01A000A59503 /* VBException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBException.m; sourceTree = "<group>"; };
 		5B6BCB1A1B5C01A000A59503 /* VBNotImplementedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNotImplementedException.h; sourceTree = "<group>"; };
 		5B6BCB1B1B5C01A000A59503 /* VBNotImplementedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNotImplementedException.m; sourceTree = "<group>"; };
+		5B6BCB1E1B5C068D00A59503 /* VBInvalidClassException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBInvalidClassException.h; sourceTree = "<group>"; };
+		5B6BCB1F1B5C068D00A59503 /* VBInvalidClassException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBInvalidClassException.m; sourceTree = "<group>"; };
+		5B6BCB211B5C06D700A59503 /* VBNilValueException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNilValueException.h; sourceTree = "<group>"; };
+		5B6BCB221B5C06D700A59503 /* VBNilValueException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNilValueException.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,10 @@
 				5B6BCB191B5C01A000A59503 /* VBException.m */,
 				5B6BCB1A1B5C01A000A59503 /* VBNotImplementedException.h */,
 				5B6BCB1B1B5C01A000A59503 /* VBNotImplementedException.m */,
+				5B6BCB1E1B5C068D00A59503 /* VBInvalidClassException.h */,
+				5B6BCB1F1B5C068D00A59503 /* VBInvalidClassException.m */,
+				5B6BCB211B5C06D700A59503 /* VBNilValueException.h */,
+				5B6BCB221B5C06D700A59503 /* VBNilValueException.m */,
 			);
 			name = VBException;
 			path = ../VBException;
@@ -240,8 +250,10 @@
 			files = (
 				5B1D64991A79900500EEEF79 /* ViewController.m in Sources */,
 				5B1D64961A79900500EEEF79 /* AppDelegate.m in Sources */,
+				5B6BCB201B5C068D00A59503 /* VBInvalidClassException.m in Sources */,
 				5B1D64931A79900500EEEF79 /* main.m in Sources */,
 				5B6BCB1D1B5C01A000A59503 /* VBNotImplementedException.m in Sources */,
+				5B6BCB231B5C06D700A59503 /* VBNilValueException.m in Sources */,
 				5B6BCB1C1B5C01A000A59503 /* VBException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
