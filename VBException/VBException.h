@@ -25,32 +25,24 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  VBException is a base class for your own exceptions. It adds useful class methods for fast exception instance creation.
+ *  VBException is a base class for your own exceptions.
+ *  Create a subclass and implement <i>+reasonWithUserInfo:</i> method to provide useful reason information.
+ *  By default, exception name is its classname. It can be changed by implementing <i>+name</i> method.
  */
 @interface VBException : NSException
 
 /**
- *  Creates exception. This method is meant to be the main one for exception creation.
- *
- *  Calls @code exceptionWithReason:userInfo: @endcode with nil values.
- *
- *  Subclasses can implement this method and call one of "exceptionWith.." methods using appropriate arguments.
+ *  The main method for exception creation.
+ *  Calls @code +exceptionWithUserInfo:nil @endcode
+ *  You should NOT override this method.
  *
  *  @return The created exception object or nil if the object couldn't be created.
  */
 + (instancetype) exception;
 
 /**
- *  Creates exception with reason.
- *
- *  @param reason A human-readable message with exception reason.
- *
- *  @return The created exception object or nil if the object couldn't be created.
- */
-+ (instancetype) exceptionWithReason:(NSString*)reason;
-
-/**
  *  Creates exception with userInfo.
+ *  You should NOT override this method.
  *
  *  @param userInfo User-defined exception information.
  *
@@ -59,17 +51,20 @@
 + (instancetype) exceptionWithUserInfo:(NSDictionary*)userInfo;
 
 /**
- *  Creates exception with reason and userInfo. 
- *  Uses @code NSStringFromClass([self class]) @endcode as exception name.
+ *  The reason for exception. Override this method in subclasses.
  *
- *  Calls designated initializer.
+ *  @param userInfo User-defined exception information. Use given userInfo to provide stringWithFormat: reasons.
  *
- *  @param reason A human-readable message with exception reason.
- *  @param userInfo User-defined exception information.
- *
- *  @return The created exception object or nil if the object couldn't be created.
+ *  @return NSString to be used as exception reason.
  */
-+ (instancetype) exceptionWithReason:(NSString*)reason
-                            userInfo:(NSDictionary*)userInfo;
++ (NSString*) reasonWithUserInfo:(NSDictionary*)userInfo;
+
+/**
+ *  Exception name.
+ *  By default, exception name is its classname.
+ *
+ *  @return NSString to be used as exception name. NSStringFromClass, by default.
+ */
++ (NSString*) name;
 
 @end

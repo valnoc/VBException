@@ -27,26 +27,21 @@
 @implementation VBException
 
 + (instancetype) exception {
-    return [self exceptionWithReason:nil
-                            userInfo:nil];
-}
-
-+ (instancetype) exceptionWithReason:(NSString*)reason {
-    return [self exceptionWithReason:reason
-                            userInfo:nil];
+    return [self exceptionWithUserInfo:nil];
 }
 
 + (instancetype) exceptionWithUserInfo:(NSDictionary*)userInfo {
-    return [self exceptionWithReason:nil
-                            userInfo:userInfo];
+    return [[self alloc] initWithName:[self name]
+                               reason:[self reasonWithUserInfo:userInfo]
+                             userInfo:userInfo];
 }
 
-+ (instancetype) exceptionWithReason:(NSString*)reason
-                            userInfo:(NSDictionary*)userInfo {
-    
-    return [[self alloc] initWithName:NSStringFromClass([self class])
-                               reason:reason
-                             userInfo:userInfo];
++ (NSString*) name {
+    return NSStringFromClass(self);
+}
+
++ (NSString*) reasonWithUserInfo:(NSDictionary*)userInfo {
+    return @"";
 }
 
 @end

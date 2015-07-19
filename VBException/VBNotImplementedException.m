@@ -26,8 +26,8 @@
 
 @implementation VBNotImplementedException
 
-+ (instancetype) exception {
-    return [self exceptionWithReason:@"Developers haven't implemented this method yet!"];
++ (NSString *) reasonWithUserInfo:(NSDictionary *)userInfo {
+    return @"This code is to be implemented later.";
 }
 
 @end
