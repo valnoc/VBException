@@ -10,10 +10,10 @@
 Pod::Spec.new do |s|
   s.name             = "VBException"
   s.version          = "1.0.0"
-  s.summary          = "VBException simplifies exception instance creation by adding useful class methods."
+  s.summary          = "VBException is a base class for your own exceptions."
   s.description      = <<-DESC
-                       VBException simplifies exception instance creation by adding useful class methods.
-VBException is a base class for your own exceptions. It adds useful class methods for fast exception instance creation.
+                       VBException is a base class for your own exceptions.
+Create a subclass and implement <i>+reasonWithUserInfo:</i> method to provide useful reason information.
                        DESC
   s.homepage         = "https://github.com/valnoc/VBException"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
