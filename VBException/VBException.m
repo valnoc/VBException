@@ -30,12 +30,13 @@
     return [self exceptionWithUserInfo:nil];
 }
 
-+ (instancetype) exceptionWithUserInfo:(NSDictionary*)userInfo {
++ (instancetype) exceptionWithUserInfo: (NSDictionary*) userInfo {
     return [[self alloc] initWithName:[self name]
                                reason:[self reasonWithUserInfo:userInfo]
                              userInfo:userInfo];
 }
 
+#pragma mark - default values
 + (NSString*) name {
     return NSStringFromClass(self);
 }

@@ -25,9 +25,15 @@
 #import <Foundation/Foundation.h>
 
 /**
- *  VBException is a base class for your own exceptions.
- *  Create a subclass and implement <i>+reasonWithUserInfo:</i> method to provide useful reason information.
+ *  VBException is a base class for your own exceptions. It makes exception creation and handling more effective.
+ *
+ *  Use case
+ *  1. Create VBException subclass.
+ *  2. Implement <i>+reasonWithUserInfo:</i> method.
+ *  3. Call <i>+exception:</i> or <i>+exceptionWithUserInfo:</i> to create an instance.
+ *
  *  By default, exception name is its classname. It can be changed by implementing <i>+name</i> method.
+ *
  */
 @interface VBException : NSException
 
@@ -51,7 +57,7 @@
 + (instancetype) exceptionWithUserInfo:(NSDictionary*)userInfo;
 
 /**
- *  The reason for exception. Override this method in subclasses.
+ *  The reason for exception. Override this method in subclasses. You can use userInfo dictionary to provide more useful reason string format.
  *
  *  @param userInfo User-defined exception information. Use given userInfo to provide stringWithFormat: reasons.
  *
