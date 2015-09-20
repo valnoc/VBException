@@ -26,8 +26,21 @@
 
 @implementation VBInvalidClassException
 
++ (instancetype) exceptionWithGivenClass:(Class) givenClass
+                           expectedClass:(Class) expectedClass {
+    return [super exceptionWithUserInfo:@{kVBInvalidClassException_givenClass:       NSStringFromClass(givenClass),
+                                          kVBInvalidClassException_expectedClass:    NSStringFromClass(expectedClass)}];
+}
+
 + (NSString *) reasonWithUserInfo:(NSDictionary *)userInfo {
-    return @"Invalid class.";
+    NSString* reason = @"Invalid class.";
+    if (userInfo[kVBInvalidClassException_givenClass]) {
+        reason = [reason stringByAppendingFormat:@" Given %@.", userInfo[kVBInvalidClassException_givenClass]];
+    }
+    if (userInfo[kVBInvalidClassException_expectedClass]) {
+        reason = [reason stringByAppendingFormat:@" Expected %@.", userInfo[kVBInvalidClassException_expectedClass]];
+    }
+    return reason;
 }
 
 @end

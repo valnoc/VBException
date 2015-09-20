@@ -24,9 +24,23 @@
 
 #import "VBException.h"
 
+#define kVBInvalidClassException_givenClass     @"givenClass"
+#define kVBInvalidClassException_expectedClass  @"expectedClass"
+
 /**
  *  Throw VBInvalidClassException when instances of invalid class were passed in code. For example, when array is allowed to contain instances of only one concrete class.
  */
 @interface VBInvalidClassException : VBException
+
+/**
+ *  Creates exception with additional reason info
+ *
+ *  @param givenClass Class of given object.
+ *  @param expectedClass Expected class.
+ *
+ *  @return The created exception object or nil if the object couldn't be created.
+ */
++ (instancetype) exceptionWithGivenClass:(Class) givenClass
+                           expectedClass:(Class) expectedClass;
 
 @end
