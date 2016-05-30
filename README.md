@@ -1,5 +1,6 @@
 VBException
 ===========
+[![](https://img.shields.io/cocoapods/v/VBException.svg)]()
 
 VBException is a base class for your own exceptions. It makes exception creation and handling more effective.
 
